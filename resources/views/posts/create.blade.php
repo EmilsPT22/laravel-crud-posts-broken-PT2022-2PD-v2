@@ -1,7 +1,10 @@
 <x-app-layout>
     <h1>Create post</h1>
 
-    <form>
+    <form action="/posts" method="post">
+        @csrf
+        @method('GET')
+
         <label for="title">Title: </label>
         <input type="text" id="title" name="title">
         <br>
@@ -10,4 +13,5 @@
         <br>
         <input type="submit" value="Create">
     </form>
+
 </x-app-layout>
